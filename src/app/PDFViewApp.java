@@ -45,7 +45,9 @@ public class PDFViewApp extends Application {
         });
 
         try {
-            pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
+        	pdfView.loadTIFF(new File("F:\\workspace2019-09\\PDFnTiffViewFXDemo\\src\\app\\mehrseitig.tiff"));
+//        	pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("fong.pdf"));
+//            pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
         } catch (Exception e) {
             e.printStackTrace();
         }

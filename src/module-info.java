@@ -19,5 +19,5 @@ module PDFViewDemo {
     requires org.controlsfx.controls;
     
     requires com.dlsc.pdfviewfx;
-	
+
 }
