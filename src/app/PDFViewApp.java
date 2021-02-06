@@ -33,9 +33,10 @@ public class PDFViewApp extends Application {
             if (chooser == null) {
                 chooser = new FileChooser();
                 chooser.setTitle("Load PDF File");
-                final ExtensionFilter filter = new ExtensionFilter("PDF Files", "*.pdf");
-                chooser.getExtensionFilters().add(filter);
-                chooser.setSelectedExtensionFilter(filter);
+                final ExtensionFilter filterPDF = new ExtensionFilter("PDF Files", "*.pdf");
+                final ExtensionFilter filterTIFF = new ExtensionFilter("TIF Files", "*.tif", "*.tiff");
+                chooser.getExtensionFilters().addAll(filterPDF, filterTIFF);
+                chooser.setSelectedExtensionFilter(filterPDF);
             }
 
             final File file = chooser.showOpenDialog(pdfView.getScene().getWindow());
@@ -45,9 +46,9 @@ public class PDFViewApp extends Application {
         });
 
         try {
-        	pdfView.loadTIFF(new File("F:\\workspace2019-09\\PDFnTiffViewFXDemo\\src\\app\\mehrseitig.tiff"));
+//        	pdfView.loadTIFF(new File("F:\\workspace2019-09\\PDFnTiffViewFXDemo\\src\\app\\mehrseitig.tiff"));
 //        	pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("fong.pdf"));
-//            pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
+            pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
         } catch (Exception e) {
             e.printStackTrace();
         }
