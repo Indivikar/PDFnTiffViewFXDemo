@@ -13,6 +13,7 @@ module PDFViewDemo {
     requires jdk.compiler;
     
     requires org.apache.pdfbox;
+    requires org.apache.fontbox;
     requires org.apache.commons.lang3;
     requires java.desktop;
     requires javafx.swing;
