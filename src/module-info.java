@@ -18,6 +18,8 @@ module PDFViewDemo {
     requires javafx.swing;
     requires org.controlsfx.controls;
     
-    requires com.dlsc.pdfviewfx;
+    requires com.indi.pdfviewfx;
+	requires org.scenicview.scenicview;
+	requires com.dlsc.pdfviewfx;
 
 }

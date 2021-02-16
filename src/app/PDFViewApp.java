@@ -1,9 +1,11 @@
 package app;
 
-import com.dlsc.pdfviewfx.PDFView;
+import com.indi.pdfviewfx.PDFView;
 //import com.sun.tools.javac.resources.launcher;
 
 import java.io.File;
+
+import org.scenicview.ScenicView;
 
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
@@ -46,9 +48,15 @@ public class PDFViewApp extends Application {
         });
 
         try {
+//        	pdfView.loadTIFF(new File(PDFViewApp.class.getResource("mehrseitig.tiff").getFile()));
 //        	pdfView.loadTIFF(new File("F:\\workspace2019-09\\PDFnTiffViewFXDemo\\src\\app\\mehrseitig.tiff"));
 //        	pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("fong.pdf"));
-            pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
+          pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("tesla3-owners-manual-short.pdf"));
+//          pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("2014-A3.pdf"));
+//          pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("O0-4663-BG-03-0001.pdf"));
+//        pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("2012- 0591.pdf"));  
+//        pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("!3603-2018-0021.pdf")); 
+//        pdfView.loadPDF(PDFViewApp.class.getResourceAsStream("2021-A1.pdf")); 
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -77,6 +85,8 @@ public class PDFViewApp extends Application {
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
         primaryStage.show();
+        
+        ScenicView.show(scene);
     }
     
     public static void main(String[] args) {
